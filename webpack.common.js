@@ -18,30 +18,49 @@ module.exports = {
     },
     module: {
         rules: [
+            /**
+             * CSS Loader
+             */
             {
                 test: /\.css$/,
                 use: [
                     'style-loader',
                     'css-loader'
                 ]
-            }, {
+            }, 
+            /**
+             * SCSS Loader
+             */
+            {
                 test: /\.scss$/,
                 use: [
                     'style-loader',
                     'css-loader',
                     'sass-loader'
                 ]
-            }, {
+            }, 
+            /**
+             * Image loader
+             */
+            {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
                     'file-loader'
                 ]
-            }, {
+            }, 
+            /**
+             * Font Loader
+             */
+            {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: [
                     'file-loader'
                 ]
-            }, {
+            }, 
+            /**
+             * Javascript Loader
+             */
+            {
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: [
@@ -52,16 +71,15 @@ module.exports = {
                         }
                     }
                 ]
-            }, {
+            }, 
+            /**
+             * HTML Loader
+             */
+            {
                 test: /\.html$/,
-                use: [/*
-                    'file-loader?name=[name].[ext]',
-                    'extract-loader',*/
+                use: [
                     {
-                        loader: 'html-loader?interpolate',/* 
-                        options: {
-                            attr: [':data-src']
-                        } */
+                        loader: 'html-loader?interpolate',
                     }
                 ]
             }
