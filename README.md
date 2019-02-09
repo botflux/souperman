@@ -12,6 +12,11 @@ A simple webpack template
 ## How to run
 
 ```shell
+# Install
+npm install
+```
+
+```shell
 # Start the development server
 npm run start
 ```
