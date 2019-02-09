@@ -1,4 +1,5 @@
 import './index.css'
+import './index.scss'
 import png from './pin.png'
 import svg from './pin.svg'
 import hello from './hello'
