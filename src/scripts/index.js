@@ -1,7 +1,7 @@
-import './index.css'
-import './index.scss'
-import png from './pin.png'
-import svg from './pin.svg'
+import '../styles/index.css'
+import '../styles/index.scss'
+import png from '../images/pin.png'
+import svg from '../images/pin.svg'
 import hello from './hello'
 
 hello('world')
