@@ -53,13 +53,25 @@ module.exports = {
                         }
                     }
                 ]
+            }, {
+                test: /\.html$/,
+                use: [/*
+                    'file-loader?name=[name].[ext]',
+                    'extract-loader',*/
+                    {
+                        loader: 'html-loader',/* 
+                        options: {
+                            attr: [':data-src']
+                        } */
+                    }
+                ]
             }
         ]
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Output Management'
+            template: 'src/index.html'
         })
     ]
 }
