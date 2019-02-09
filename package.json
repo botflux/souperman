@@ -5,9 +5,9 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "build": "webpack --config webpack.prod.js",
-    "watch": "webpack --watch --config webpack.config.js",
-    "start": "webpack-dev-server --open --config webpack.dev.js"
+    "build": "webpack --config webpack.prod.js --progress",
+    "watch": "webpack --watch --config webpack.config.js --progress",
+    "start": "webpack-dev-server --open --config webpack.dev.js --progress"
   },
   "repository": {
     "type": "git",
