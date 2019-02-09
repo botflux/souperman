@@ -58,7 +58,7 @@ module.exports = {
                     'file-loader?name=[name].[ext]',
                     'extract-loader',*/
                     {
-                        loader: 'html-loader',/* 
+                        loader: 'html-loader?interpolate',/* 
                         options: {
                             attr: [':data-src']
                         } */
