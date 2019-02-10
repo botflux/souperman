@@ -16,6 +16,10 @@ A simple webpack template
 
 - PWA
 
+## Test
+
+Tests for the webpack configuration are not currently implemented.
+
 ## How to run
 
 ```shell
