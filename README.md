@@ -7,7 +7,14 @@ A simple webpack template
 - Babel,
 - SCSS/CSS,
 - HTML template,
-- HTML interpolation.
+- HTML interpolation,
+- Webp convertion support for JPG & PNG,
+- Image support,
+- Font support.
+
+## Future features
+
+- PWA
 
 ## How to run
 
