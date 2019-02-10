@@ -40,10 +40,26 @@ module.exports = {
                 ]
             }, 
             /**
+             * Webp loader
+             */
+            {
+                test: /\.(jpe?g|png)$/,
+                use: [
+                    {
+                        loader: 'image-webp-loader',
+                        options: {
+                            name: '[name].[hash].[ext]',
+                            publicPath: './',
+                            requestWebp: true
+                        }
+                    }
+                ]
+            },
+            /**
              * Image loader
              */
             {
-                test: /\.(png|svg|jpg|gif)$/,
+                test: /\.(svg|gif)$/,
                 use: [
                     'file-loader'
                 ]
