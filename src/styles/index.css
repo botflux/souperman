@@ -1,11 +1,116 @@
 @font-face {
-    font-family: 'MyFont';
-    src:  url('../fonts/font.ttf') format('TrueType');
-    font-weight: 600;
+    font-family: 'Japanese brush';
+    src:  url('../fonts/japanese-brush.ttf') format('TrueType');
+    font-weight: 400;
     font-style: normal;
 }
 
 body {
-    background: blue;
-    font-family: 'Architects Daughter';
+    font-family: 'Source sans pro';
+    min-height: 100vh;
+    margin: 0;
+}
+
+/*
+===========================================
+    Header
+===========================================
+*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 80px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    letter-spacing: .05rem;
+}
+
+.nav-list-item {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.nav-list-item:nth-child(1) {
+    margin-left: 0;
+}
+
+.header-brand {
+    font-family: 'Japanese brush';
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*
+=====================================================================
+    Page
+=====================================================================
+*/
+/* .page {
+
+} */
+
+/*
+=====================================================================
+    Page section
+=====================================================================
+*/
+.section {
+    min-height: 80vh;
+}
+
+.landing {
+    margin-left: 3%;
+    margin-right: 3%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.landing-title {
+    position: relative;
+
+    font-size: 7.5rem;
+    font-weight: 300;
+    letter-spacing: 1rem;
+}
+
+.landing-title::before {
+    content: " ";
+
+    position: absolute;
+    top: 38%;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+
+    background: orange;
+
+    z-index: -1;
+
+    display: block;
+}
+
+.landing-text {
+    font-size: 1.5rem;
+    width: 28%;
+}
+
+.landing-media {
+    position: absolute;
+    width: 85%;
+    right: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+
+    z-index: -2;
 }
