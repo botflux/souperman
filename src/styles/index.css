@@ -5,112 +5,131 @@
     font-style: normal;
 }
 
+:root {
+    /* Colors */
+    --primary-color: #FC720E;
+
+    /* Title variables */
+    --title-font-size: 2.45rem;
+
+    /* Subtitle variables */
+    --subtitle-font-size: 1.2rem;
+    --subtitle-letter-spacing: .06rem;
+    --subtitle-line-height: 2.35rem;
+
+    /* Paragraphe variables */
+    --p-letter-spacing: .06rem;
+    --p-line-height: 2.35rem;
+
+    /* Button variables */
+    --button-font-size: 1rem;
+    --button-letter-spacing: .06rem;
+    --button-text-transform: uppercase;
+
+    /* Header structure */
+    --header-padding-x: 32px;
+    --header-padding-y: 32px;
+
+    /* Header typography */
+    --header-brand-font-size: 1.1rem;
+
+    /* Page structure */
+    --page-padding-x: 13px;
+}
+
 body {
     font-family: 'Source sans pro';
     min-height: 100vh;
     margin: 0;
+
+    font-size: 14px;
+}
+
+p {
+    letter-spacing: var(--p-letter-spacing);
+    line-height: var(--p-line-height);
 }
 
 /*
-===========================================
     Header
-===========================================
 */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 80px;
-}
 
-.nav-link {
-    text-decoration: none;
-    color: black;
-    letter-spacing: .05rem;
-}
-
-.nav-list-item {
-    display: inline-block;
-    margin-left: 100px;
-}
-
-.nav-list-item:nth-child(1) {
-    margin-left: 0;
+    padding: var(--header-padding-y) var(--header-padding-y);
 }
 
 .header-brand {
     font-family: 'Japanese brush';
+    font-size: var(--header-brand-font-size);
     text-decoration: none;
     color: #000;
 }
 
+.hamburger {
+    width: 24px;
+    height: 12px;
+}
 
-/*
-=====================================================================
-    Page
-=====================================================================
-*/
-/* .page {
-
-} */
-
-/*
-=====================================================================
-    Page section
-=====================================================================
+/* 
+    Base structure
 */
 .section {
     min-height: 80vh;
-}
-
-.landing {
-    margin-left: 3%;
-    margin-right: 3%;
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
 
-    position: relative;
+/*
+    Landing section
+*/
+.landing-content {
+    text-align: center;
+
+    padding: 0 var(--page-padding-x);
+
+    margin-top: 50px;
 }
 
 .landing-title {
-    position: relative;
+    font-weight: 200;
+    font-size: var(--title-font-size);
+    letter-spacing: 0.405rem;
 
-    font-size: 7.5rem;
-    font-weight: 300;
-    letter-spacing: 1rem;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.landing-text {
+    letter-spacing: var(--subtitle-letter-spacing);
+    font-size: var(--subtitle-font-size);
+}
+
+.landing-media {
+    padding: 0 var(--page-padding-x);
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    min-height: 271px;
 }
 
 .landing-title::before {
     content: " ";
 
-    position: absolute;
-    top: 38%;
-    bottom: 10%;
-    left: 0;
-    right: 0;
+    display: block;
 
-    background: orange;
+    position: absolute;
+    bottom: 0;
+    top: 35%;
+    right: 0;
+    left: 0;
+
+    background: var(--primary-color);
 
     z-index: -1;
-
-    display: block;
-}
-
-.landing-text {
-    font-size: 1.5rem;
-    width: 28%;
-}
-
-.landing-media {
-    position: absolute;
-    width: 85%;
-    right: 0;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    height: 100%;
-    box-sizing: border-box;
-    object-fit: cover;
-
-    z-index: -2;
 }
