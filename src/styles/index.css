@@ -29,6 +29,7 @@
     /* Header structure */
     --header-padding-x: 32px;
     --header-padding-y: 32px;
+    --header-margin-bottom: 8px;
 
     /* Header typography */
     --header-brand-font-size: 1.1rem;
@@ -58,7 +59,8 @@ p {
     justify-content: space-between;
     align-items: center;
 
-    padding: var(--header-padding-y) var(--header-padding-y);
+    padding: var(--header-padding-y) var(--header-padding-x);
+    margin-bottom: var(--header-margin-bottom);
 }
 
 .header-brand {
@@ -132,4 +134,21 @@ p {
     background: var(--primary-color);
 
     z-index: -1;
+}
+
+@media screen and (min-width: 600px) {
+    :root {
+        --title-font-size: 4.5rem;
+
+        --subtitle-font-size: 1.5rem;
+
+        --header-padding-x: 52px;
+        --header-margin-bottom: 40px;
+
+        --page-padding-x: 52px;
+    }
+
+    .landing-media {
+        min-height: 605px;
+    }
 }
