@@ -6,6 +6,8 @@
 }
 
 :root {
+    font-size: 14px;
+
     /* Colors */
     --primary-color: #FC720E;
 
@@ -42,8 +44,6 @@ body {
     font-family: 'Source sans pro';
     min-height: 100vh;
     margin: 0;
-
-    font-size: 14px;
 }
 
 p {
@@ -98,13 +98,32 @@ p {
 }
 
 .landing-title {
+    display: inline-block;
+
     font-weight: 200;
     font-size: var(--title-font-size);
-    letter-spacing: 0.405rem;
+    letter-spacing: .8rem;
+    text-transform: uppercase;
 
     margin: 0 auto;
 
     position: relative;
+}
+
+.landing-title::before {
+    content: " ";
+
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+    top: 25%;
+    right: 0;
+    left: 0;
+
+    background: var(--primary-color);
+
+    z-index: -1;
 }
 
 .landing-text {
@@ -118,22 +137,6 @@ p {
     width: 100%;
     height: auto;
     min-height: 271px;
-}
-
-.landing-title::before {
-    content: " ";
-
-    display: block;
-
-    position: absolute;
-    bottom: 0;
-    top: 35%;
-    right: 0;
-    left: 0;
-
-    background: var(--primary-color);
-
-    z-index: -1;
 }
 
 @media screen and (min-width: 600px) {
@@ -150,5 +153,51 @@ p {
 
     .landing-media {
         min-height: 605px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    :root {
+        font-size: 16px;
+
+        --header-padding-x: 80px;
+        --header-margin-bottom: 70px;
+
+        --title-font-size: 4.3333225rem;
+
+        --subtitle-font-size: 1.3rem;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .landing {
+        position: relative;
+    }
+
+    .landing-media {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 60%;
+
+        padding: 0;
+
+        z-index: -2;
+    }
+
+    .landing-content {
+        text-align: left;
+        
+    }
+
+    .landing-title {
+        margin-right: auto;
+    }
+
+    .landing-text {
+        width: 20%;
     }
 }
