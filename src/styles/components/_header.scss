@@ -18,6 +18,8 @@
 
     padding: var(--header-padding-y) var(--header-padding-x);
     margin-bottom: var(--header-margin-bottom);
+
+    position: relative;
 }
 
 .header-brand {
@@ -30,6 +32,61 @@
 .hamburger {
     width: 24px;
     height: 12px;
+}
+
+#navState {
+    display: none;
+}
+
+#navState:checked ~ .header-nav {
+    display: block;
+
+    position: absolute;
+    top: calc(100% - var(--header-margin-bottom) + var(--header-padding-y));
+    right: 0;
+    left: 0;
+    z-index: 10000;
+
+}
+
+#navState:checked ~ .header-nav > .nav-list {
+    height: 100%;
+}
+
+.nav-list {
+    padding: 0;
+    margin: 0;
+
+    background: #fff;
+    box-shadow: 0px 14px 20px 0px rgba(0, 0, 0, 0.2);
+    height: 0;
+    transition: all .5s;
+
+    overflow: hidden;
+}
+
+.nav-list-item {
+    list-style: none;
+
+    margin: 0 var(--page-padding-x);
+    padding: 20px;
+
+    border-bottom: 1px solid #000;
+}
+
+.nav-list-item:last-child {
+    border: 0;
+}
+
+.nav-link {
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.header-nav {
+    display: none;
 }
 
 @media screen and (min-width: 600px) {
