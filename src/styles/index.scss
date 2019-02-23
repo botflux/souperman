@@ -1,3 +1,5 @@
+@import "./components/header";
+
 @font-face {
     font-family: 'Japanese brush';
     src:  url('../fonts/japanese-brush.ttf') format('TrueType');
@@ -13,7 +15,7 @@
 
     /* Title variables */
     --title-font-size: 2.45rem;
-
+    
     /* Subtitle variables */
     --subtitle-font-size: 1.2rem;
     --subtitle-letter-spacing: .06rem;
@@ -28,14 +30,6 @@
     --button-letter-spacing: .06rem;
     --button-text-transform: uppercase;
 
-    /* Header structure */
-    --header-padding-x: 32px;
-    --header-padding-y: 32px;
-    --header-margin-bottom: 8px;
-
-    /* Header typography */
-    --header-brand-font-size: 1.1rem;
-
     /* Page structure */
     --page-padding-x: 13px;
 }
@@ -49,30 +43,6 @@ body {
 p {
     letter-spacing: var(--p-letter-spacing);
     line-height: var(--p-line-height);
-}
-
-/*
-    Header
-*/
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: var(--header-padding-y) var(--header-padding-x);
-    margin-bottom: var(--header-margin-bottom);
-}
-
-.header-brand {
-    font-family: 'Japanese brush';
-    font-size: var(--header-brand-font-size);
-    text-decoration: none;
-    color: #000;
-}
-
-.hamburger {
-    width: 24px;
-    height: 12px;
 }
 
 /* 
@@ -102,7 +72,7 @@ p {
 
     font-weight: 300;
     font-size: var(--title-font-size);
-    letter-spacing: 1.3rem;
+    letter-spacing: .6rem;
     text-transform: uppercase;
 
     margin: 0 auto;
@@ -146,27 +116,17 @@ p {
 
         --subtitle-font-size: 1.5rem;
 
-        --header-padding-x: 52px;
-        --header-margin-bottom: 40px;
-
         --page-padding-x: 52px;
     }
 
     .landing-media {
         min-height: 605px;
     }
-
-    .landing-title {
-        margin-bottom: 100px;
-    }
 }
 
 @media screen and (min-width: 900px) {
     :root {
         font-size: 16px;
-
-        --header-padding-x: 80px;
-        --header-margin-bottom: 70px;
 
         --title-font-size: 4.3333225rem;
 
@@ -180,13 +140,16 @@ p {
         --button-font-size: .875rem;
         --button-letter-spacing: .05rem;
 
-        --header-brand-font-size: 1rem;
-
         --page-padding-x: 80px;
     }
 
     .landing {
         position: relative;
+    }
+
+    .landing-title {
+        letter-spacing: 1.3rem;
+        margin-bottom: 100px;
     }
 
     .landing-media {
@@ -242,6 +205,8 @@ p {
 
     .landing-media {
         max-height: 75vh;
-        width: 75%;
+        width: 70%;
+        
+        right: 2%;
     }
 }

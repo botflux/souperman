@@ -1,0 +1,61 @@
+:root {
+    /* Header structure */
+    --header-padding-x: 32px;
+    --header-padding-y: 32px;
+    --header-margin-bottom: 8px;
+
+    /* Header typography */
+    --header-brand-font-size: 1.1rem;
+}
+
+/*
+    Header
+*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: var(--header-padding-y) var(--header-padding-x);
+    margin-bottom: var(--header-margin-bottom);
+}
+
+.header-brand {
+    font-family: 'Japanese brush';
+    font-size: var(--header-brand-font-size);
+    text-decoration: none;
+    color: #000;
+}
+
+.hamburger {
+    width: 24px;
+    height: 12px;
+}
+
+@media screen and (min-width: 600px) {
+    :root {
+        --header-padding-x: 52px;
+        --header-margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    :root {
+        --header-padding-x: 80px;
+        --header-margin-bottom: 70px;
+
+        --header-brand-font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    :root {
+        --header-padding-x: 96px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    :root {
+        --header-padding-x: 140px;
+    }
+}
