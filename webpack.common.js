@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
     entry: {
         app: './src/scripts/index.js',
-        style: './src/styles/index.css'
+        style: './src/styles/index.scss'
     },
     output: {
         filename: '[name].[hash].js',
