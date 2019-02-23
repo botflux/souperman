@@ -137,6 +137,7 @@ p {
     width: 100%;
     height: auto;
     min-height: 271px;
+    object-fit: cover;
 }
 
 @media screen and (min-width: 600px) {
@@ -154,6 +155,10 @@ p {
     .landing-media {
         min-height: 605px;
     }
+
+    .landing-title {
+        margin-bottom: 100px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -166,10 +171,18 @@ p {
         --title-font-size: 4.3333225rem;
 
         --subtitle-font-size: 1.3rem;
-    }
+        --subtitle-letter-spacing: .05rem;
+        --subtitle-line-height: 2.06rem;
 
-    body {
-        font-size: 16px;
+        --p-letter-spacing: .05rem;
+        --p-line-height: 2.06rem;
+
+        --button-font-size: .875rem;
+        --button-letter-spacing: .05rem;
+
+        --header-brand-font-size: 1rem;
+
+        --page-padding-x: 80px;
     }
 
     .landing {
@@ -181,7 +194,10 @@ p {
         top: 0;
         bottom: 0;
         right: 0;
-        width: 60%;
+        width: 63%;
+
+        min-height: auto;
+        max-height: 552px;
 
         padding: 0;
 
@@ -191,6 +207,7 @@ p {
     .landing-content {
         text-align: left;
         
+        margin: 0;
     }
 
     .landing-title {
@@ -199,5 +216,32 @@ p {
 
     .landing-text {
         width: 20%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    :root {
+        --page-padding-x: 96px;
+
+        --title-font-size: 5rem;
+
+        --subtitle-font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    :root {
+        --title-font-size: 7.5rem;
+
+        --p-font-size: 1.2rem;
+    }
+
+    p {
+        font-size: var(--p-font-size);
+    }
+
+    .landing-media {
+        max-height: 75vh;
+        width: 75%;
     }
 }
