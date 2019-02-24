@@ -45,6 +45,15 @@ p {
     line-height: var(--p-line-height);
 }
 
+.title {
+    font-size: var(--title-font-size);
+    font-weight: 700;
+}
+
+.page > .section {
+    margin-bottom: 150px;   
+}
+
 /* 
     Base structure
 */
@@ -110,6 +119,46 @@ p {
     object-fit: cover;
 }
 
+/* Layout 1 */
+.layout-1 {
+    position: relative;
+}
+
+.layout-1-img {
+    width: 60%;
+    // height: auto;
+    height: 287px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.layout-1-title {
+    
+    position: absolute;
+    top: 50px;
+    right: 0;
+    
+    width: 70%;
+    text-align: right;
+    margin-left: auto;
+}
+
+.layout-1-content {
+    padding: 0 var(--page-padding-x);
+}
+
+.layout-1-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.button {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
 @media screen and (min-width: 600px) {
     :root {
         --title-font-size: 4.5rem;
@@ -121,6 +170,44 @@ p {
 
     .landing-media {
         min-height: 605px;
+    }
+
+    .layout-1 {
+        min-height: auto;
+
+
+        &-title {
+            position: static;
+            width: auto;
+        }
+
+        &-content {
+            width: 70%;
+            margin-left: auto;
+
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        &-text {
+            width: 50%;
+            margin-left: auto;
+            margin-top: 100px;
+        }
+
+        &-img {
+            width: 45%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+        }
+
+        &-button {
+            margin-left: 50%;
+            display: inline-block;
+        }
     }
 }
 
@@ -189,6 +276,19 @@ p {
         --title-font-size: 5rem;
 
         --subtitle-font-size: 1.5rem;
+    }
+
+    .layout-1 {
+        min-height: 85vh;
+
+        &-content {
+            padding-right: calc(var(--page-padding-x) * 2);
+        }
+
+        &-img {
+            width: 100%;
+            clip-path: url(#layout-1-cp);
+        }
     }
 }
 
