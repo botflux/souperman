@@ -23,3 +23,130 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
+.page > .section {
+    margin-bottom: 150px;
+}
+
+.landing {
+    &-media {
+        padding: var(--page-padding-x);
+        box-sizing: border-box;
+
+        width: 100%;
+        min-height: 271px;
+
+        object-fit: cover;
+    }
+
+    &-title {
+        font-weight: 300;
+        letter-spacing: .35em;
+        text-transform: uppercase;
+
+        position: relative;
+
+        // margin-right: auto;
+        // margin-left: auto;
+
+        display: inline-block;
+
+        &::after {
+            content: " ";
+
+            z-index: -1;
+
+            position: absolute;
+            bottom: 5%;
+            right: 0;
+            left: 0;
+            top: 25%;
+
+            background: var(--primary-color);
+        }
+    }
+
+    &-text {
+        font-size: 1.2rem;
+    }
+
+    &-content {
+        padding: var(--page-padding-x);
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    :root {
+        --page-padding-x: 80px;
+    }
+
+    .landing {
+        &-text {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    :root {
+        --page-padding-x: 80px;
+    }
+
+    .landing {
+        position: relative;
+
+        min-height: 552px;
+
+        display: flex;
+        align-items: center;
+
+        &-media {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 70%;
+
+            height: 100%;
+
+            padding: 0;
+
+            z-index: -2;
+        }
+
+        &-content {
+            text-align: left;
+
+            padding-bottom: 0;
+            padding-top: 0;
+
+            margin: auto 0;
+
+            width: 100%;
+        }
+
+        &-title {
+            margin-bottom: 100px;
+        }
+
+        &-text {
+            width: 25%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 1500px) {
+    .landing {
+        min-height: 80vh;
+
+        &-media {
+            right: var(--page-padding-x);
+            width: calc(70% - var(--page-padding-x));
+        }
+    }
+}
