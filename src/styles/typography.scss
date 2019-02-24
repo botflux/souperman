@@ -1,6 +1,7 @@
 :root {
     /* Title variables */
     --title-font-size: 2.47rem;
+    --title-letter-spacing: .04rem;
     
     /* Subtitle variables */
     --subtitle-font-size: 1.2rem;
@@ -19,11 +20,19 @@
 
 .title {
     font-size: var(--title-font-size);
+    letter-spacing: var(--title-letter-spacing);
+}
+
+p {
+    line-height: var(--p-line-height);
+    letter-spacing: var(--p-letter-spacing);
 }
 
 @media screen and (min-width: 600px) {
     :root {
         --title-font-size: 4.2rem;
+
+        --p-line-height: 2.85rem;
     }
 }
 
@@ -32,6 +41,8 @@
         font-size: 16px;
 
         --title-font-size: 4.3333325rem;
+
+        --p-line-height: 2.8125rem;
     }
 }
 
@@ -44,7 +55,7 @@
 @media screen and (min-width: 1500px) {
     :root {
         font-size: 18px;
-        
+
         --title-font-size: 6.6666rem;
     }
 }
