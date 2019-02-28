@@ -23,6 +23,15 @@
     letter-spacing: var(--title-letter-spacing);
 }
 
+.button {
+    text-transform: var(--button-text-transform);
+    font-weight: 700;
+    font-size: var(--button-font-size);
+    letter-spacing: var(--button-letter-spacing);
+    text-decoration: none;
+    color: #000;
+}
+
 p {
     line-height: var(--p-line-height);
     letter-spacing: var(--p-letter-spacing);

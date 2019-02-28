@@ -76,6 +76,42 @@ body {
     }
 }
 
+.layout-1 {
+    position: relative;
+
+    &-img {
+        width: 70%;
+        height: 287px;
+
+        box-sizing: border-box;
+
+        object-fit: cover;
+    }
+
+    &-content {
+        padding-left: var(--page-padding-x);
+        padding-right: var(--page-padding-x);
+        padding-top: 50px;
+    }
+
+    &-title {
+        width: 80%;
+        margin-bottom: 70px;
+        padding-right: var(--page-padding-x);
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        text-align: right;
+        margin-top: 100px;
+    }
+
+    &-text {
+        margin-bottom: 50px;
+    }
+}
+
 @media screen and (min-width: 600px) {
     :root {
         --page-padding-x: 80px;
@@ -86,11 +122,56 @@ body {
             font-size: 1.5rem;
         }
     }
+
+    .layout-1 {
+        &-title {
+            position: static;
+            width: auto;
+            padding: 0;
+        }
+
+        &-img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 40%;
+            height: 100%;
+
+            z-index: -1;
+        }
+
+        &-text {
+            text-align: justify;
+            width: 60%;
+            margin-left: auto;
+        }
+
+        &-content {
+            width: 70%;
+            margin-left: auto;
+            padding-bottom: 100px;
+        }
+
+        &-button {
+            margin-left: 40%;
+        }
+    }
 }
 
 @media screen and (min-width: 900px) {
     :root {
         --page-padding-x: 80px;
+    }
+
+    .layout-1 {
+        &-title {
+            padding-right: 10%;
+        }
+
+        &-img {
+            width: 45%;
+        }
     }
 
     .landing {
@@ -137,7 +218,31 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+    .layout-1 {
+        &-content {
+            padding-right: 20%;
+            padding-bottom: 150px;
+        }
 
+        &-img {
+            right: 0;
+            width: 100%;
+
+            clip-path: url(#layout-1-cp);
+        }
+
+        &-text {
+            width: 40%;
+        }
+
+        &-button {
+            margin-left: 60%;
+        }
+
+        &-title {
+            padding-right: 0;
+        }
+    }
 }
 
 @media screen and (min-width: 1500px) {
