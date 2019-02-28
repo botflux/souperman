@@ -1,24 +1,8 @@
-# Webpack template
+# Souperman
 
-A simple webpack template
+## To fix
 
-## Features
-
-- Babel,
-- SCSS/CSS,
-- HTML template,
-- HTML interpolation,
-- Webp convertion support for JPG & PNG,
-- Image support,
-- Font support.
-
-## Future features
-
-- PWA
-
-## Test
-
-Tests for the webpack configuration are not currently implemented.
+- Layout 1 text, it need to be properly style. Maybe use grid.
 
 ## How to run
 
