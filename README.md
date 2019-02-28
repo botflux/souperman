@@ -3,6 +3,7 @@
 ## To fix
 
 - Layout 1 text, it need to be properly style. Maybe use grid.
+- Menu need to use javascript instead of css weird tricks
 
 ## How to run
 
