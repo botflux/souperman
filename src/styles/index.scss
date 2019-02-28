@@ -128,6 +128,7 @@ body {
             position: static;
             width: auto;
             padding: 0;
+            margin-bottom: 150px;
         }
 
         &-img {
@@ -145,6 +146,7 @@ body {
             text-align: justify;
             width: 60%;
             margin-left: auto;
+            margin-bottom: 70px;
         }
 
         &-content {
@@ -252,6 +254,45 @@ body {
         &-media {
             right: var(--page-padding-x);
             width: calc(70% - var(--page-padding-x));
+        }
+    }
+
+    .layout-1 {
+        &-text {
+            margin-left: 0;
+            padding-left: 30%;
+            padding-right: 20%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            margin-bottom: 90px;
+
+            position: relative;
+
+            &::before {
+                content: " ";
+                position: absolute;
+                right: 0;
+                left: 0;
+                background: var(--primary-color);
+                bottom: 0;
+                top: 0;
+                z-index: -5;
+            }
+        }
+
+        &-title {
+            padding-right: 20%;
+            margin-bottom: 120px;
+            margin-top: 200px;
+        }
+
+        &-content {
+            padding-right: 0;
+        }
+
+        &-button {
+            margin-left: 30%;
         }
     }
 }
