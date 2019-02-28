@@ -16,6 +16,8 @@
 
     /* Page structure */
     --page-padding-x: 13px;
+
+    --section-margin-bottom: 150px;
 }
 
 body {
@@ -25,7 +27,7 @@ body {
 }
 
 .page > .section {
-    margin-bottom: 150px;
+    margin-bottom: var(--section-margin-bottom);
 }
 
 .landing {
@@ -164,6 +166,7 @@ body {
 @media screen and (min-width: 900px) {
     :root {
         --page-padding-x: 80px;
+        --section-margin-bottom: 200px;
     }
 
     .layout-1 {
@@ -220,6 +223,11 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+
+    :root {
+        --section-margin-bottom: 250px;
+    }
+
     .layout-1 {
         &-content {
             padding-right: 20%;
@@ -248,6 +256,10 @@ body {
 }
 
 @media screen and (min-width: 1500px) {
+    :root {
+        --section-margin-bottom: 300px;
+    }
+
     .landing {
         min-height: 80vh;
 
@@ -260,6 +272,7 @@ body {
     .layout-1 {
         &-text {
             margin-left: 0;
+
             padding-left: 30%;
             padding-right: 20%;
             padding-top: 20px;
