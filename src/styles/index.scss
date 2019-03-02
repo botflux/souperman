@@ -98,6 +98,66 @@ body {
     }
 }
 
+.layout-2 {
+    position: relative;
+
+    &::after {
+        content: " ";
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 30%;
+        height: 100%;
+        background: var(--primary-color);
+        opacity: .5;
+
+        z-index: -1;
+    }
+
+    &-img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+        width: 30%;
+        height: 100%;
+
+        box-sizing: border-box;
+        object-fit: cover;
+
+        z-index: -2;
+    }
+
+    &-title {
+        padding-left: var(--page-padding-x);
+        padding-right: calc(var(--page-padding-x) * 4);
+
+        padding-top: 40px;
+
+        text-align: right;
+    }
+
+    &-text {
+        margin-left: var(--page-padding-x);
+        margin-right: calc(var(--page-padding-x) * 4.5);
+        text-align: justify;
+        padding: var(--page-padding-x) calc(1.5 * var(--page-padding-x));
+        background: var(--primary-color);
+    }
+
+    &-content {
+        padding-bottom: 40px;
+    }
+
+    &-button {
+        display: inline-block;
+        padding: 0 var(--page-padding-x);
+    }
+}
+
 /* .layout-1 {
     position: relative;
 
@@ -182,42 +242,31 @@ body {
         }
     }
 
-    /* .layout-1 {
+    .layout-2 {
         &-title {
-            position: static;
-            width: auto;
-            padding: 0;
-            margin-bottom: 150px;
+            padding-right: var(--page-padding-x);
+            padding-top: 150px;
+            margin-bottom: 100px;
         }
 
         &-img {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 40%;
-            height: 100%;
+            width: 45%;
+        }
 
-            z-index: -1;
+        &::after {
+            width: 45%;
         }
 
         &-text {
-            text-align: justify;
-            width: 60%;
-            margin-left: auto;
+            margin-right: calc(2.5 * var(--page-padding-x));
+            padding: 25px;
             margin-bottom: 70px;
         }
 
         &-content {
-            width: 70%;
-            margin-left: auto;
-            padding-bottom: 100px;
+            padding-bottom: 150px;
         }
-
-        &-button {
-            margin-left: 40%;
-        }
-    } */
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -287,6 +336,34 @@ body {
             width: 25%;
         }
     }
+
+    .layout-2 {
+        &-img {
+            width: 55%;
+        }
+
+        &::after {
+            width: 55%;
+        }
+
+        &-content {
+            width: 45%;
+            padding-bottom: 70px;
+        }
+
+        &-title {
+            width: 60%;
+        }
+
+        &-text {
+            margin-left: var(--page-padding-x);
+            margin-right: var(--page-padding-x);
+
+            padding: 0;
+
+            background: none;
+        }
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -315,8 +392,10 @@ body {
             padding-left: 30%;
             padding-right: 30%;
 
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+
+            margin-bottom: 60px;
 
             position: relative;
 
@@ -340,6 +419,8 @@ body {
 
             margin-left: -40%;
             margin-right: -20%;
+
+            margin-bottom: 100px;
         }
 
         &-button {
@@ -357,31 +438,35 @@ body {
         }
     }
 
-    /* .layout-1 {
-        &-content {
-            padding-right: 20%;
-            padding-bottom: 150px;
+    .layout-2 {
+        &-img {
+            width: 100%;
+            left: 0;
+
+            clip-path: url(#layout-2-cp);
         }
 
-        &-img {
-            right: 0;
+        &::after {
             width: 100%;
+            left: 0;
 
-            clip-path: url(#layout-1-cp);
+            clip-path: url(#layout-2-cp);
+        }
+
+        &-content {
+            margin-left: 10%;
         }
 
         &-text {
-            width: 40%;
+            margin-left: 50px;
+            width: 55%;
         }
 
         &-button {
-            margin-left: 60%;
+            margin-left: 50px;
+            padding: 0;
         }
-
-        &-title {
-            padding-right: 0;
-        }
-    } */
+    }
 }
 
 @media screen and (min-width: 1500px) {
@@ -395,6 +480,17 @@ body {
         &-media {
             right: var(--page-padding-x);
             width: calc(70% - var(--page-padding-x));
+        }
+    }
+
+    .layout-1 {
+        &-title {
+            margin-bottom: 120px;
+        }
+
+        &-text {
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
     }
 /* 
