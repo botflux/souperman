@@ -21,6 +21,8 @@
 .title {
     font-size: var(--title-font-size);
     letter-spacing: var(--title-letter-spacing);
+
+    margin-bottom: 55px;
 }
 
 .button {
@@ -35,6 +37,8 @@
 p {
     line-height: var(--p-line-height);
     letter-spacing: var(--p-letter-spacing);
+
+    margin-bottom: 50px;
 }
 
 @media screen and (min-width: 600px) {
