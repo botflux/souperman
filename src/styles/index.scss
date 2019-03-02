@@ -306,15 +306,10 @@ body {
             box-sizing: border-box;
             margin-right: 10%;
 
-            overflow: hidden;
-
-            z-index: 2;
+            // overflow: hidden;
         }
 
         &-text {
-            /*
-                Overflow hidden must be placed on the parent  
-            */
             margin-left: -30%;
             margin-right: -30%;
             padding-left: 30%;
@@ -323,13 +318,28 @@ body {
             padding-top: 50px;
             padding-bottom: 50px;
 
-            // z-index: -2;
+            position: relative;
 
-            background: var(--primary-color);
+            &::before {
+                position: absolute;
+                content: " ";
+
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+                background: var(--primary-color);
+
+                z-index: -1000;
+            }
         }
 
         &-title {
-            margin-left: 0;
+            position: relative;
+
+            margin-left: -40%;
+            margin-right: -20%;
         }
 
         &-button {
@@ -342,8 +352,6 @@ body {
             right: 0;
             bottom: 0;
             left: 0;
-
-            z-index: -1000;
 
             clip-path: url(#layout-1-cp);
         }
