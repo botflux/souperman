@@ -24,6 +24,10 @@ body {
     position: relative;
 }
 
+.page {
+    overflow: hidden;
+}
+
 .landing {
     min-height: 60vh;
 
@@ -49,6 +53,7 @@ body {
 
 .landing-media {
     height: 60vh;
+    overflow: hidden;
 
     &-img {
         height: 100%;
