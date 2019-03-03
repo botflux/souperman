@@ -162,30 +162,27 @@ body {
         z-index: -2;
     }
 
-    &-title {
+    &-header {
         padding-left: var(--page-padding-x);
         padding-right: calc(var(--page-padding-x) * 4);
-
         padding-top: 40px;
 
         text-align: right;
     }
 
     &-text {
-        margin-left: var(--page-padding-x);
-        margin-right: calc(var(--page-padding-x) * 4.5);
         text-align: justify;
-        padding: var(--page-padding-x) calc(1.5 * var(--page-padding-x));
-        background: var(--primary-color);
     }
 
     &-content {
+        margin-right: calc(var(--page-padding-x) + 30%);
+        margin-left: var(--page-padding-x);
         padding-bottom: 40px;
     }
 
-    &-button {
-        display: inline-block;
-        padding: 0 var(--page-padding-x);
+    &-footer {
+        padding-left: var(--page-padding-x);
+        padding-bottom: 40px;
     }
 }
 
@@ -228,7 +225,7 @@ body {
     }
 
     .layout-2 {
-        &-title {
+        &-header {
             padding-right: var(--page-padding-x);
             padding-top: 150px;
             margin-bottom: 100px;
@@ -242,14 +239,8 @@ body {
             width: 45%;
         }
 
-        &-text {
-            margin-right: calc(2.5 * var(--page-padding-x));
-            padding: 25px;
-            margin-bottom: 70px;
-        }
-
         &-content {
-            padding-bottom: 150px;
+            margin-right: calc(45% + var(--page-padding-x));
         }
     }
 }
@@ -338,21 +329,12 @@ body {
         }
 
         &-content {
-            width: 45%;
+            margin-right: calc(55% + var(--page-padding-x));
             padding-bottom: 70px;
         }
 
-        &-title {
+        &-header {
             width: 60%;
-        }
-
-        &-text {
-            margin-left: var(--page-padding-x);
-            margin-right: var(--page-padding-x);
-
-            padding: 0;
-
-            background: none;
         }
     }
 }
@@ -407,17 +389,13 @@ body {
         }
 
         &-content {
-            margin-left: 10%;
+            margin-left: calc(10% + var(--page-padding-x));
+            margin-right: calc(55% + var(--page-padding-x));
+            padding-bottom: 0;
         }
 
-        &-text {
-            margin-left: 50px;
-            width: 55%;
-        }
-
-        &-button {
-            margin-left: 50px;
-            padding: 0;
+        &-footer {
+            padding-left: calc(10% + var(--page-padding-x));
         }
     }
 }
