@@ -78,7 +78,7 @@ body {
     }
 }
 
-.layout-1 {
+/* .layout-1 {
     &-img {
         width: 100%;
         padding-left: calc(var(--page-padding-x) * 3);
@@ -95,6 +95,57 @@ body {
 
     &-text {
         text-align: justify;
+    }
+} */
+
+.layout-1 {
+    position: relative;
+
+    &-header {
+        padding-top: 1px;
+        padding-left: calc(4 * var(--page-padding-x));
+        padding-right: var(--page-padding-x);
+    }
+
+    &-content {
+        margin-right: var(--page-padding-x);
+        margin-left: calc(30% + var(--page-padding-x));
+    }
+
+    &-text {
+        text-align: justify;
+    }
+
+    &-footer {
+        margin-right: var(--page-padding-x);
+        margin-left: calc(30% + var(--page-padding-x));
+        padding-bottom: 50px;
+    }
+
+    &::after {
+        content: " ";
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 30%;
+
+        background: var(--primary-color);
+        opacity: .5;
+
+        z-index: -1;
+    }
+
+    &-img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
     }
 }
 
@@ -210,12 +261,35 @@ body {
     }
 
     .layout-1 {
+        &::after {
+            width: 45%;
+        }
 
-        /*
-            This layout use grid, maybe try to do the same with Flex.
-            The problem was that when we use flex, the containing element does not use 100% of the height by default.
-            Grid solves this problem but it's not "browser friendly" cause of comptability. 
-        */
+        &-img {
+            width: 45%;
+        }
+
+        &-header {
+            padding-left: var(--page-padding-x);
+            padding-top: 50px;
+        }
+
+        &-content {
+            margin-left: calc(45% + var(--page-padding-x));
+        }
+
+        &-footer {
+            margin-left: calc(45% + var(--page-padding-x));
+        }
+    }
+
+    /* .layout-1 {
+
+        
+            // This layout use grid, maybe try to do the same with Flex.
+            // The problem was that when we use flex, the containing element does not use 100% of the height by default.
+            // Grid solves this problem but it's not "browser friendly" cause of comptability. 
+        
         display: grid;
         grid-template-columns: .95fr 1fr;
 
@@ -240,7 +314,7 @@ body {
             padding-top: 100px;
             padding-bottom: 100px;
         }
-    }
+    } */
 
     .layout-2 {
         &-title {
@@ -275,6 +349,32 @@ body {
         --section-margin-bottom: 200px;
     }
 
+    .layout-1 {
+        &::after {
+            width: 55%;
+        }
+
+        &-img {
+            width: 55%;
+        }
+
+        &-header {
+            width: 60%;
+            margin-left: auto;
+
+            margin-bottom: 100px;
+            padding-top: 150px;
+        }
+
+        &-content {
+            margin-left: calc(55% + var(--page-padding-x));
+        }
+
+        &-footer {
+            margin-left: calc(55% + var(--page-padding-x));
+        }
+    }
+
     /* .layout-1 {
         &-title {
             padding-right: 10%;
@@ -285,7 +385,7 @@ body {
         }
     } */
 
-    .layout-1 {
+    /* .layout-1 {
 
         grid-template-columns: 1.3fr 1fr;
 
@@ -293,7 +393,7 @@ body {
             text-align: right;
             margin-left: calc(var(--page-padding-x) * -5);
         }
-    }
+    } */
 
     .landing {
         position: relative;
@@ -373,6 +473,34 @@ body {
     }
 
     .layout-1 {
+        &::after {
+            right: 0;
+            width: 100%;
+            clip-path: url(#layout-1-cp);
+        }
+
+        &-img {
+            right: 0;
+            width: 100%;
+            clip-path: url(#layout-1-cp);
+        }
+
+        &-content {
+            margin-left: 45%;
+            margin-right: 10%;
+            padding: 0 var(--page-padding-x);
+        }
+
+        &-footer {
+            margin-left: 45%;
+            margin-right: 10%;
+            padding: 0 var(--page-padding-x);
+
+            padding-bottom: 100px;
+        }
+    }
+
+    /* .layout-1 {
         position: relative;
 
         grid-template-columns: 1fr;
@@ -436,7 +564,7 @@ body {
 
             clip-path: url(#layout-1-cp);
         }
-    }
+    } */
 
     .layout-2 {
         &-img {
@@ -483,7 +611,7 @@ body {
         }
     }
 
-    .layout-1 {
+    /* .layout-1 {
         &-title {
             margin-bottom: 120px;
         }
@@ -492,7 +620,7 @@ body {
             padding-top: 50px;
             padding-bottom: 50px;
         }
-    }
+    } */
 /* 
     .layout-1 {
         &-text {
