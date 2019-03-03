@@ -1,0 +1,47 @@
+:root {
+    font-size: 16px;
+
+    --title-font-size: 1.875rem;
+    --title-letter-spacing: 0.133em;
+    --title-font-weight: 400;
+
+    --p-letter-spacing: .06em;
+    --p-line-height: 1.875em;
+}
+
+body {
+    font-family: 'Source sans pro';
+}
+
+.title {
+    font-size: var(--title-font-size);
+    letter-spacing: var(--title-letter-spacing);
+    font-weight: var(--title-font-weight);
+}
+
+p {
+    letter-spacing: var(--p-letter-spacing);
+    line-height: var(--p-line-height);
+}
+
+@media screen and (min-width: var(--breakpoint-sm)) {
+    :root {
+        --title-font-size: 3.41rem;
+
+        --p-line-height: 2.8125em;
+    }
+}
+
+@media screen and (min-width: var(--breakpoint-md)) {
+    :root {
+        font-size: 18px;
+
+        --title-font-size: 3.7rem;
+    }
+}
+
+@media screen and (min-width: var(--breakpoint-xl)) {
+    :root {
+        --title-font-size: 4.9rem;
+    }
+}

@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
     entry: {
         app: './src/scripts/index.js',
-        style: './src/styles/index.scss'
+        style: './src/styles/index.new.scss'
     },
     output: {
         filename: '[name].[hash].js',
@@ -105,7 +105,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            template: 'src/templates/index.html'
+            template: 'src/templates/index.new.html'
         })
     ]
 }
