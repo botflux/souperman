@@ -1,19 +1,20 @@
 const parallax = ({ elements = [] } = {}) => {
-
-    let firstIteration = true
-
     // register the base bounding state of each element
     elements = elements.map(e => ({ ...e, baseBounding: e.element.getBoundingClientRect() }))
 
     return () => {
         const currentScrollY = window.scrollY
 
-        elements.forEach(({ element, offset = 200, transformations, baseBounding }) => {
+        elements.forEach(({ element, offset = 200, transformations, baseBounding, forceHeight = false }) => {
 
             // on récupère la position et la hauteur du parent
-            const { y, height } = baseBounding
+            let { y, height } = baseBounding
 
-            console.log(height)
+            if (forceHeight === true) {
+                height = element.getBoundingClientRect().height
+            }
+
+            console.log('height', height)
 
             // on calcule la distance qui a été scrollé sur le parent sous forme de pourcentage
             // par exemple le scroll à l'entré du parent vaut 0, le scroll à la sortie du parent vaut 1
@@ -38,8 +39,6 @@ const parallax = ({ elements = [] } = {}) => {
                 })
             }
         })
-
-        firstIteration = false
     }
 }
 

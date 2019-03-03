@@ -7,11 +7,13 @@ const parallax = Parallax({
             transformations: [
                 { min: 0, max: 1, name: 'transform', value: 'scale(${1 + (x * 3)})' }
             ],
+            forceHeight: true
         }, {
             element: document.querySelector('.landing-media'),
             transformations: [
                 { min: 0, max: 1, name: 'transform', value: 'translate(0, -${x * 1500}px)'}
-            ]
+            ],
+            forceHeight: true
         }, {
             element: document.querySelector('#landing'),
             offset: 100,
@@ -21,7 +23,11 @@ const parallax = Parallax({
         }
     ]
 })
-// parallax(true)
-document.addEventListener('scroll', parallax, {
-    passive: true
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('ok')
+    // parallax(true)
+    document.addEventListener('scroll', parallax, {
+        passive: true
+    })
 })
