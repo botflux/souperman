@@ -9,6 +9,13 @@
     --p-line-height: 1.875em;
 }
 
+@font-face {
+    font-family: 'Japanese brush';
+    src:  url('../fonts/japanese-brush.ttf') format('TrueType');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     font-family: 'Source sans pro';
 }
@@ -24,7 +31,12 @@ p {
     line-height: var(--p-line-height);
 }
 
-@media screen and (min-width: var(--breakpoint-sm)) {
+.underline {
+    border-bottom: 4px solid rgba(255, 0, 0, .5);
+    font-weight: inherit;
+}
+
+@media screen and (min-width: 600px) {
     :root {
         --title-font-size: 3.41rem;
 
@@ -32,7 +44,7 @@ p {
     }
 }
 
-@media screen and (min-width: var(--breakpoint-md)) {
+@media screen and (min-width: 900px) {
     :root {
         font-size: 18px;
 
@@ -40,83 +52,8 @@ p {
     }
 }
 
-@media screen and (min-width: var(--breakpoint-xl)) {
+@media screen and (min-width: 1500px) {
     :root {
         --title-font-size: 4.9rem;
     }
 }
-
-// :root {
-//     /* Title variables */
-//     --title-font-size: 2.47rem;
-//     --title-letter-spacing: .04rem;
-    
-//     /* Subtitle variables */
-//     --subtitle-font-size: 1.2rem;
-//     --subtitle-letter-spacing: .06rem;
-//     --subtitle-line-height: 2.35rem;
-
-//     /* Paragraphe variables */
-//     --p-letter-spacing: .06rem;
-//     --p-line-height: 2.35rem;
-
-//     /* Button variables */
-//     --button-font-size: 1rem;
-//     --button-letter-spacing: .06rem;
-//     --button-text-transform: uppercase;
-// }
-
-// .title {
-//     font-size: var(--title-font-size);
-//     letter-spacing: var(--title-letter-spacing);
-
-//     margin-bottom: 55px;
-// }
-
-// .button {
-//     text-transform: var(--button-text-transform);
-//     font-weight: 700;
-//     font-size: var(--button-font-size);
-//     letter-spacing: var(--button-letter-spacing);
-//     text-decoration: none;
-//     color: #000;
-// }
-
-// p {
-//     line-height: var(--p-line-height);
-//     letter-spacing: var(--p-letter-spacing);
-
-//     margin-bottom: 50px;
-// }
-
-// @media screen and (min-width: 600px) {
-//     :root {
-//         --title-font-size: 4.2rem;
-
-//         --p-line-height: 2.85rem;
-//     }
-// }
-
-// @media screen and (min-width: 900px) {
-//     :root {
-//         font-size: 16px;
-
-//         --title-font-size: 4.3333325rem;
-
-//         --p-line-height: 2.8125rem;
-//     }
-// }
-
-// @media screen and (min-width: 1200px) {
-//     :root {
-//         --tile-font-size: 5rem;
-//     }
-// }
-
-// @media screen and (min-width: 1500px) {
-//     :root {
-//         font-size: 18px;
-
-//         --title-font-size: 6.6666rem;
-//     }
-// }

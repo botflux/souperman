@@ -71,424 +71,96 @@ body {
 
     &-text {
         margin: 0;
+        margin-bottom: 10px;
         font-size: 18px;
         font-weight: 200;
+        line-height: 1em;
     }
 }
 
-// @import "./components/header";
-// @import "./typography.scss";
-
-// @font-face {
-//     font-family: 'Japanese brush';
-//     src:  url('../fonts/japanese-brush.ttf') format('TrueType');
-//     font-weight: 400;
-//     font-style: normal;
-// }
-
-// :root {
-//     font-size: 14px;
-
-//     /* Colors */
-//     --primary-color: #FC720E;
-
-//     /* Page structure */
-//     --page-padding-x: 13px;
-
-//     --section-margin-bottom: 150px;
-// }
-
-// body {
-//     font-family: 'Source sans pro';
-//     min-height: 100vh;
-//     margin: 0;
-// }
-
-// .page > .section {
-//     margin-bottom: var(--section-margin-bottom);
-// }
-
-// .landing {
-//     &-media {
-//         padding: var(--page-padding-x);
-//         box-sizing: border-box;
-
-//         width: 100%;
-//         min-height: 271px;
-
-//         object-fit: cover;
-//     }
-
-//     &-title {
-//         font-weight: 300;
-//         letter-spacing: .35em;
-//         text-transform: uppercase;
-
-//         position: relative;
-
-//         // margin-right: auto;
-//         // margin-left: auto;
-
-//         display: inline-block;
-
-//         &::after {
-//             content: " ";
-
-//             z-index: -1;
-
-//             position: absolute;
-//             bottom: 5%;
-//             right: 0;
-//             left: 0;
-//             top: 25%;
-
-//             background: var(--primary-color);
-//         }
-//     }
-
-//     &-text {
-//         font-size: 1.2rem;
-//     }
-
-//     &-content {
-//         padding: var(--page-padding-x);
-//         text-align: center;
-//     }
-// }
-
-// .layout-1 {
-//     position: relative;
-
-//     &-header {
-//         padding-top: 1px;
-//         padding-left: calc(4 * var(--page-padding-x));
-//         padding-right: var(--page-padding-x);
-//     }
-
-//     &-content {
-//         margin-right: var(--page-padding-x);
-//         margin-left: calc(30% + var(--page-padding-x));
-//     }
-
-//     &-text {
-//         text-align: justify;
-//     }
-
-//     &-footer {
-//         margin-right: var(--page-padding-x);
-//         margin-left: calc(30% + var(--page-padding-x));
-//         padding-bottom: 50px;
-//     }
-
-//     &::after {
-//         content: " ";
-//         position: absolute;
-
-//         top: 0;
-//         bottom: 0;
-//         left: 0;
-//         width: 30%;
-
-//         background: var(--primary-color);
-//         opacity: .5;
-
-//         z-index: -1;
-//     }
-
-//     &-img {
-//         position: absolute;
-//         top: 0;
-//         bottom: 0;
-//         left: 0;
-//         width: 30%;
-//         height: 100%;
-//         object-fit: cover;
-//         z-index: -2;
-//     }
-// }
-
-// .layout-2 {
-//     position: relative;
-
-//     &::after {
-//         content: " ";
-
-//         position: absolute;
-//         top: 0;
-//         bottom: 0;
-//         right: 0;
-//         width: 30%;
-//         height: 100%;
-//         background: var(--primary-color);
-//         opacity: .5;
-
-//         z-index: -1;
-//     }
-
-//     &-img {
-//         position: absolute;
-//         top: 0;
-//         bottom: 0;
-//         right: 0;
-
-//         width: 30%;
-//         height: 100%;
-
-//         box-sizing: border-box;
-//         object-fit: cover;
-
-//         z-index: -2;
-//     }
-
-//     &-header {
-//         padding-left: var(--page-padding-x);
-//         padding-right: calc(var(--page-padding-x) * 4);
-//         padding-top: 40px;
-
-//         text-align: right;
-//     }
-
-//     &-text {
-//         text-align: justify;
-//     }
-
-//     &-content {
-//         margin-right: calc(var(--page-padding-x) + 30%);
-//         margin-left: var(--page-padding-x);
-//         padding-bottom: 40px;
-//     }
-
-//     &-footer {
-//         padding-left: var(--page-padding-x);
-//         padding-bottom: 40px;
-//     }
-// }
-
-// @media screen and (min-width: 600px) {
-//     :root {
-//         --page-padding-x: 80px;
-//     }
-
-//     .xs-only {
-//         display: none;
-//     }
-
-//     .landing {
-//         &-text {
-//             font-size: 1.5rem;
-//         }
-//     }
-
-//     .layout-1 {
-//         &::after {
-//             width: 45%;
-//         }
-
-//         &-img {
-//             width: 45%;
-//         }
-
-//         &-header {
-//             padding-left: var(--page-padding-x);
-//             padding-top: 50px;
-//         }
-
-//         &-content {
-//             margin-left: calc(45% + var(--page-padding-x));
-//         }
-
-//         &-footer {
-//             margin-left: calc(45% + var(--page-padding-x));
-//         }
-//     }
-
-//     .layout-2 {
-//         &-header {
-//             padding-right: var(--page-padding-x);
-//             padding-top: 150px;
-//             margin-bottom: 100px;
-//         }
-
-//         &-img {
-//             width: 45%;
-//         }
-
-//         &::after {
-//             width: 45%;
-//         }
-
-//         &-content {
-//             margin-right: calc(45% + var(--page-padding-x));
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 900px) {
-//     :root {
-//         --page-padding-x: 80px;
-//         --section-margin-bottom: 200px;
-//     }
-
-//     .layout-1 {
-//         &::after {
-//             width: 55%;
-//         }
-
-//         &-img {
-//             width: 55%;
-//         }
-
-//         &-header {
-//             width: 60%;
-//             margin-left: auto;
-
-//             margin-bottom: 100px;
-//             padding-top: 150px;
-//         }
-
-//         &-content {
-//             margin-left: calc(55% + var(--page-padding-x));
-//         }
-
-//         &-footer {
-//             margin-left: calc(55% + var(--page-padding-x));
-//         }
-//     }
-
-//     .landing {
-//         position: relative;
-
-//         min-height: 552px;
-
-//         display: flex;
-//         align-items: center;
-
-//         &-media {
-//             position: absolute;
-//             right: 0;
-//             bottom: 0;
-//             top: 0;
-//             width: 70%;
-
-//             height: 100%;
-
-//             padding: 0;
-
-//             z-index: -2;
-//         }
-
-//         &-content {
-//             text-align: left;
-
-//             padding-bottom: 0;
-//             padding-top: 0;
-
-//             margin: auto 0;
-
-//             width: 100%;
-//         }
-
-//         &-title {
-//             margin-bottom: 100px;
-//         }
-
-//         &-text {
-//             width: 25%;
-//         }
-//     }
-
-//     .layout-2 {
-//         &-img {
-//             width: 55%;
-//         }
-
-//         &::after {
-//             width: 55%;
-//         }
-
-//         &-content {
-//             margin-right: calc(55% + var(--page-padding-x));
-//             padding-bottom: 70px;
-//         }
-
-//         &-header {
-//             width: 60%;
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 1200px) {
-
-//     :root {
-//         --section-margin-bottom: 250px;
-//     }
-
-//     .layout-1 {
-//         &::after {
-//             right: 0;
-//             width: 100%;
-//             clip-path: url(#layout-1-cp);
-//         }
-
-//         &-img {
-//             right: 0;
-//             width: 100%;
-//             clip-path: url(#layout-1-cp);
-//         }
-
-//         &-content {
-//             margin-left: 45%;
-//             margin-right: 10%;
-//             padding: 0 var(--page-padding-x);
-//         }
-
-//         &-footer {
-//             margin-left: 45%;
-//             margin-right: 10%;
-//             padding: 0 var(--page-padding-x);
-
-//             padding-bottom: 100px;
-//         }
-//     }
-
-//     .layout-2 {
-//         &-img {
-//             width: 100%;
-//             left: 0;
-
-//             clip-path: url(#layout-2-cp);
-//         }
-
-//         &::after {
-//             width: 100%;
-//             left: 0;
-
-//             clip-path: url(#layout-2-cp);
-//         }
-
-//         &-content {
-//             margin-left: calc(10% + var(--page-padding-x));
-//             margin-right: calc(55% + var(--page-padding-x));
-//             padding-bottom: 0;
-//         }
-
-//         &-footer {
-//             padding-left: calc(10% + var(--page-padding-x));
-//         }
-//     }
-// }
-
-// @media screen and (min-width: 1500px) {
-//     :root {
-//         --section-margin-bottom: 300px;
-//     }
-
-//     .landing {
-//         min-height: 80vh;
-
-//         &-media {
-//             right: var(--page-padding-x);
-//             width: calc(70% - var(--page-padding-x));
-//         }
-//     }
-// }
+@media screen and (min-width: 600px) {
+    :root {
+        --page-padding-x: 80px;
+    }
+
+    .landing {
+        &-img-wrapper {
+            margin-left: 30%;
+            height: 365px;
+        }
+
+        &-text {
+            font-size: 1.5rem;
+        }
+
+        &-title {
+            font-size: 4.6875rem;
+        }
+
+        &-media {
+            margin-top: calc(4.6875rem / 2.4 * -1);
+            height: 600px;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .landing {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 65vh auto;
+
+        grid-template-areas: 
+            "content blank img"
+            "media media media"
+        ;
+
+        &-media {
+            grid-area: media;
+            margin-top: 0;
+        }
+
+        &-content {
+            grid-area: content;
+            align-self: end;
+
+            margin-bottom: calc(102px / 2.7 * -1);
+
+            margin-left: calc(var(--page-padding-x) / 4);
+            margin-right: calc(var(--page-padding-x) / 2);
+        }
+
+        &-text {
+            font-size: 1.888rem;
+        }
+
+        &-img-wrapper {
+            margin-left: 0;
+            grid-area: img;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .landing {
+        grid-template-rows: 75vh auto;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .landing {
+        &-title {
+            font-size: 10rem;
+        }
+
+        &-content {
+            margin-bottom: calc(10rem / 2 * -1);
+        }
+
+        &-text {
+            font-size: 3.2rem;
+        }
+    }
+}

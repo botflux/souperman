@@ -122,6 +122,10 @@
         right: auto;
     }
 
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
     .nav-list {
         background: #00000000;
         box-shadow: none;
@@ -147,6 +151,6 @@
     }
 
     .nav-list-item {
-        margin-left: 100px;
+        margin-left: 80px;
     }
 }
