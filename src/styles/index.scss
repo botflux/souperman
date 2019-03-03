@@ -78,26 +78,6 @@ body {
     }
 }
 
-/* .layout-1 {
-    &-img {
-        width: 100%;
-        padding-left: calc(var(--page-padding-x) * 3);
-        box-sizing: border-box;
-        min-height: 250px;
-        object-fit: cover;
-        max-height: 350px;
-    }
-
-    &-content {
-        padding-right: var(--page-padding-x);
-        padding-left: var(--page-padding-x);
-    }
-
-    &-text {
-        text-align: justify;
-    }
-} */
-
 .layout-1 {
     position: relative;
 
@@ -209,42 +189,6 @@ body {
     }
 }
 
-/* .layout-1 {
-    position: relative;
-
-    &-img {
-        width: 70%;
-        height: 287px;
-
-        box-sizing: border-box;
-
-        object-fit: cover;
-    }
-
-    &-content {
-        padding-left: var(--page-padding-x);
-        padding-right: var(--page-padding-x);
-        padding-top: 50px;
-    }
-
-    &-title {
-        width: 80%;
-        margin-bottom: 70px;
-        padding-right: var(--page-padding-x);
-
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        text-align: right;
-        margin-top: 100px;
-    }
-
-    &-text {
-        margin-bottom: 50px;
-    }
-} */
-
 @media screen and (min-width: 600px) {
     :root {
         --page-padding-x: 80px;
@@ -282,39 +226,6 @@ body {
             margin-left: calc(45% + var(--page-padding-x));
         }
     }
-
-    /* .layout-1 {
-
-        
-            // This layout use grid, maybe try to do the same with Flex.
-            // The problem was that when we use flex, the containing element does not use 100% of the height by default.
-            // Grid solves this problem but it's not "browser friendly" cause of comptability. 
-        
-        display: grid;
-        grid-template-columns: .95fr 1fr;
-
-        &-img {
-            // width: 50%;
-            padding-left: 0;
-            height: 100%;
-            max-height: none;
-            min-height: auto;
-        }
-
-        &-title {
-            text-align: right;
-            margin-left: calc(var(--page-padding-x) * -3);
-        }
-
-        &-button {
-            margin-left: calc(var(--page-padding-x) / 3 * -1);
-        }
-
-        &-content {
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-    } */
 
     .layout-2 {
         &-title {
@@ -374,26 +285,6 @@ body {
             margin-left: calc(55% + var(--page-padding-x));
         }
     }
-
-    /* .layout-1 {
-        &-title {
-            padding-right: 10%;
-        }
-
-        &-img {
-            width: 45%;
-        }
-    } */
-
-    /* .layout-1 {
-
-        grid-template-columns: 1.3fr 1fr;
-
-        &-title {
-            text-align: right;
-            margin-left: calc(var(--page-padding-x) * -5);
-        }
-    } */
 
     .landing {
         position: relative;
@@ -500,72 +391,6 @@ body {
         }
     }
 
-    /* .layout-1 {
-        position: relative;
-
-        grid-template-columns: 1fr;
-
-        &-content {
-            width: 45%;
-            margin-left: auto;
-            box-sizing: border-box;
-            margin-right: 10%;
-
-            // overflow: hidden;
-        }
-
-        &-text {
-            margin-left: -30%;
-            margin-right: -30%;
-            padding-left: 30%;
-            padding-right: 30%;
-
-            padding-top: 25px;
-            padding-bottom: 25px;
-
-            margin-bottom: 60px;
-
-            position: relative;
-
-            &::before {
-                position: absolute;
-                content: " ";
-
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-
-                background: var(--primary-color);
-
-                z-index: -1000;
-            }
-        }
-
-        &-title {
-            position: relative;
-
-            margin-left: -40%;
-            margin-right: -20%;
-
-            margin-bottom: 100px;
-        }
-
-        &-button {
-            margin-left: 0;
-        }
-
-        &-img {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            clip-path: url(#layout-1-cp);
-        }
-    } */
-
     .layout-2 {
         &-img {
             width: 100%;
@@ -610,55 +435,4 @@ body {
             width: calc(70% - var(--page-padding-x));
         }
     }
-
-    /* .layout-1 {
-        &-title {
-            margin-bottom: 120px;
-        }
-
-        &-text {
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-    } */
-/* 
-    .layout-1 {
-        &-text {
-            margin-left: 0;
-
-            padding-left: 30%;
-            padding-right: 20%;
-            padding-top: 20px;
-            padding-bottom: 20px;
-
-            margin-bottom: 90px;
-
-            position: relative;
-
-            &::before {
-                content: " ";
-                position: absolute;
-                right: 0;
-                left: 0;
-                background: var(--primary-color);
-                bottom: 0;
-                top: 0;
-                z-index: -5;
-            }
-        }
-
-        &-title {
-            padding-right: 20%;
-            margin-bottom: 120px;
-            margin-top: 200px;
-        }
-
-        &-content {
-            padding-right: 0;
-        }
-
-        &-button {
-            margin-left: 30%;
-        }
-    } */
 }
