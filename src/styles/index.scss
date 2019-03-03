@@ -25,120 +25,35 @@ body {
 }
 
 .landing {
-    &-img-wrapper {
-        margin-left: var(--page-padding-x);
-        position: relative;
-        height: 175px;
+    min-height: 60vh;
 
-        &::after {
-            content: " ";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-            background: var(--primary-color);
-            opacity: .5;
-        }
-    }
-
-    &-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    &-media {
-        object-fit: cover;
-        height: 385px;
-        width: 100%;
-
-        margin-top: calc(var(--title-font-size) / 2.4 * -1);
-    }
-
-    &-content {
-        margin-left: var(--page-padding-x);
-        margin-right: var(--page-padding-x);
-
-        margin-top: 40px;
-    }
+    text-align: center;
 
     &-title {
         margin: 0;
         font-weight: 900;
+        margin-bottom: 10px;
     }
 
     &-text {
         margin: 0;
-        margin-bottom: 10px;
         font-size: 18px;
         font-weight: 200;
-        line-height: 1em;
+        line-height: 1.1em;
     }
 }
 
-.section-card {
-    background: #fff;
-    margin-left: calc(var(--page-padding-x) / 2);
-    margin-right: calc(var(--page-padding-x) / 2);
-    margin-top: -50px;
-
-    position: relative;
-    z-index: 10;
-
-    box-shadow: 0 2px 9px 1px rgba(0,0,0,.2);
-    border-radius: 8px;
-}
-
-.who {
-    &-decoration {
-        display: none;
-    }
+.landing-media {
+    height: 60vh;
 
     &-img {
-        width: 90%;
-        display: none;
-        margin: 0 auto;
+        height: 100%;
+        width: 100%;
         object-fit: cover;
-        padding-top: 10px;
-        height: 200px;
-    }
-
-    &-content {
-        padding: var(--page-padding-x);
-    }
-
-    &-text {
-        opacity: .8;
-    }
-
-    &-text:last-of-type {
-        margin-bottom: 50px;
-    }
-
-    &-title {
-        margin-top: 0;
-        margin-bottom: 50px;
-        text-align: center;
-    }
-
-    &-stats {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-        margin-bottom: 50px;
-    }
-
-    &-stat {
-        &-title {
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        &-text {
-            margin: 0;
-            color: var(--primary-color);
-        }
     }
 }
 
@@ -148,83 +63,22 @@ body {
     }
 
     .landing {
-        &-img-wrapper {
-            margin-left: 30%;
-            height: 365px;
-        }
-
         &-text {
-            font-size: 1.5rem;
+            font-size: 23px;
         }
 
         &-title {
-            font-size: 4.6875rem;
-        }
-
-        &-media {
-            margin-top: calc(4.6875rem / 2.4 * -1);
-            height: 600px;
+            font-size: 75px;
+            margin-bottom: 20px;
         }
     }
 }
 
 @media screen and (min-width: 900px) {
-    .landing {
-        display: grid;
-
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 65vh auto;
-
-        grid-template-areas: 
-            "content blank img"
-            "media media media"
-        ;
-
-        &-media {
-            grid-area: media;
-            margin-top: 0;
-        }
-
-        &-content {
-            grid-area: content;
-            align-self: end;
-
-            margin-bottom: calc(102px / 2.7 * -1);
-
-            margin-left: calc(var(--page-padding-x) / 4);
-            margin-right: calc(var(--page-padding-x) / 2);
-        }
-
-        &-text {
-            font-size: 1.888rem;
-        }
-
-        &-img-wrapper {
-            margin-left: 0;
-            grid-area: img;
-            height: 100%;
-        }
-    }
 }
 
 @media screen and (min-width: 1200px) {
-    .landing {
-        grid-template-rows: 75vh auto;
-    }
 }
 
 @media screen and (min-width: 1500px) {
-    .landing {
-        &-title {
-            font-size: 10rem;
-        }
-
-        &-content {
-            margin-bottom: calc(10rem / 2 * -1);
-        }
-
-        &-text {
-            font-size: 3.2rem;
-        }
-    }
 }
