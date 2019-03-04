@@ -50,6 +50,13 @@ button.button {
     border: none;
 }
 
+.button.primary {
+    background: var(--primary-color);
+    padding: 0.9em 1.6em;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
 @media screen and (min-width: 600px) {
     :root {
         --title-font-size: 3.41rem;

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Souperman</title>
+</head>
+<body>
+    <div class="container">    
+        ${require('./header.html')}
+        <div class="page">
+            <section>
+                <header class="contact-header">
+                    <h1 class="title-1 contact-title">Contactez-nous <br>maintenant !</h1>
+                    <p class="contact-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, laudantium aperiam?</p>
+                </header>
+                <div class="information">
+                    <address>523 Rosemary Street,<br> 67000 Strasbourg<br> France</address>
+                    <p>(+33)6 12 34 56 78</p>
+                </div>
+                <div class="socials">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                </div>
+
+                <form action="#" class="contact-content" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-group-input" id="lastName" name="lastName">
+                        <label for="lastName" class="form-group-label">Saisissez votre nom</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-group-input" id="firstName" name="firstName">
+                        <label for="firstName" class="form-group-label">Saisissez votre prénom</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-group-input" id="email" name="email">
+                        <label for="email" class="form-group-label">Saisissez votre email</label>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="content" id="content" cols="30" rows="10" class="form-group-input"></textarea>
+                        <label for="content" class="form-group-label">Saisissez votre message</label>
+                    </div>
+
+                    <button type="submit" class="button primary">Envoyer</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

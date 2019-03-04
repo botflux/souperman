@@ -1,6 +1,11 @@
 const parallax = ({ elements = [] } = {}) => {
     // register the base bounding state of each element
-    elements = elements.map(e => ({ ...e, baseBounding: e.element.getBoundingClientRect() }))
+    elements = elements
+        .filter(e => e.element !== undefined)
+        .map(e => ({ 
+            ...e, 
+            baseBounding: e.element.getBoundingClientRect() 
+        }))
 
     return () => {
         const currentScrollY = window.scrollY

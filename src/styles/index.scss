@@ -282,7 +282,7 @@ body {
         left: 0;
         right: 0;
         bottom: 0;
-        margin-left: 20px;
+        margin-left: 10px;
         opacity: .7;
         transition: .3s;
     }
@@ -291,11 +291,11 @@ body {
         border: 0;
         font-family: 'Source sans pro';
         font-size: 1rem;
-        padding: 0.7em 0.3em;
+        padding: 1.3em 0.3em;
         width: 100%;
         box-sizing: border-box;
 
-        background: rgba(255,255,255, .3);
+        background: #FC720EBB;
         border-radius: 4px 4px 0 0;
         border-bottom: 1px solid #00000055;
 
@@ -312,6 +312,16 @@ body {
                 margin-left: 0;
             }
         }
+    }
+}
+
+.contact {
+    &-header {
+        margin: var(--page-padding-x);
+    }
+
+    &-content {
+        margin: 0 var(--page-padding-x);
     }
 }
 
