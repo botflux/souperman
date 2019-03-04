@@ -1,4 +1,5 @@
 import Parallax from './parallax'
+import './scroll-out'
 
 const parallax = Parallax({
     elements: [ {
