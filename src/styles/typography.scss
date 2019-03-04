@@ -45,6 +45,11 @@ p {
     color: #000;
 }
 
+button.button {
+    background: none;
+    border: none;
+}
+
 @media screen and (min-width: 600px) {
     :root {
         --title-font-size: 3.41rem;
