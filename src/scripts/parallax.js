@@ -14,7 +14,7 @@ const parallax = ({ elements = [] } = {}) => {
                 height = element.getBoundingClientRect().height
             }
 
-            console.log('height', name,height)
+            // console.log('height', name,height)
 
             // on calcule la distance qui a été scrollé sur le parent sous forme de pourcentage
             // par exemple le scroll à l'entré du parent vaut 0, le scroll à la sortie du parent vaut 1
@@ -23,7 +23,7 @@ const parallax = ({ elements = [] } = {}) => {
 
             // console.log(element, percent)
 
-            console.log(percent)
+            // console.log(percent)
 
             /**
              * lors ce que l'on scroll dans la zone du parent alors on anime,
@@ -33,7 +33,7 @@ const parallax = ({ elements = [] } = {}) => {
                 transformations.forEach(({ min, max, name, value }) => {
                     const x = /* firstIteration === true ? ( percent < 0 ? min : max ) :  */((max - min) * percent) + min
 
-                    console.log('pass')
+                    // console.log('pass')
 
                     element.style[name] = eval('`' + value + '`')
                 })

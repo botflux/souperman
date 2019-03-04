@@ -10,9 +10,11 @@
     <div class="container">    
         ${require('./header.html')}
         <div class="page">
-            <section class="section landing" id="landing">
-                <p class="landing-text">Une troupe de spectacle <br><strong class="underline">pas comme les autres.</strong></p>
-                <h1 class="landing-title title">Soupe'rman</h1>
+            <section class="landing" id="landing">
+                <div class="landing-content">
+                    <p class="landing-text">Une troupe de spectacle <br><strong class="underline">pas comme les autres.</strong></p>
+                    <h1 class="landing-title title">Soupe'rman</h1>
+                </div>
             </section>
 
             <section class="section landing-media">
@@ -50,14 +52,14 @@
                 </section>
 
                 <section class="shows">
-                    <img src="../images/fougere.jpg" alt="Fougères" class="shows-media">
-                    <header class="shows-header">
+                    <img src="../images/fougere.jpg" alt="Fougères" class="shows-media"  data-scroll>
+                    <header class="shows-header" data-scroll>
                         <h2 class="title shows-title">Des spectacles pour les petits et grands</h2>
                     </header>
-                    <div class="shows-content">
+                    <div class="shows-content" data-scroll>
                         <p class="shows-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illum, labore placeat consectetur ipsa numquam excepturi dolore, quis repellat doloremque perspiciatis alias, reprehenderit praesentium officiis? Tempore culpa sit provident omnis!</p>
                     </div>
-                    <footer class="shows-footer">
+                    <footer class="shows-footer" data-scroll>
                         <a href="#" class="button">Voir notre agenda</a>
                     </footer>
                 </section>
@@ -86,6 +88,9 @@
         <defs>
             <clipPath id="newsletter-image" clipPathUnits="objectBoundingBox">
                 <path d="M0,0 V.8 L.5,1 L1,.8 V0 Z" />
+            </clipPath>
+            <clipPath id="landing-content-cp" clipPathUnits="objectBoundingBox">
+                <path d="M0,0 H1 V1 H0 Z" />
             </clipPath>
         </defs>
     </svg>

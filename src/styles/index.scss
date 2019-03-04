@@ -35,11 +35,20 @@ body {
 .landing {
     min-height: 60vh;
 
+    position: relative;
+    text-align: center;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    text-align: center;
+    clip-path: url(#landing-content-cp);
+
+    // &-content {
+    //     position: fixed;
+    //     top: 40%;
+    //     width: 100%;
+    // }
 
     &-title {
         margin: 0;
@@ -147,6 +156,27 @@ body {
         padding-top: 20px;
         height: 200px;
         object-fit: cover;
+
+        &[data-scroll] {
+            transition: all .3s;
+        }
+        &[data-scroll="in"] {
+            transform: translate(0);
+        }
+        &[data-scroll="out"] {
+            transform: translate(-100%);
+        }
+    }
+
+    
+    &-header[data-scroll], &-content[data-scroll], &-footer[data-scroll] {
+        transition: all .3s;
+    }
+    &-header[data-scroll="in"], &-content[data-scroll="in"], &-footer[data-scroll="in"] {
+        transform: translate(0);
+    }
+    &-header[data-scroll="out"], &-content[data-scroll="out"], &-footer[data-scroll="out"] {
+        transform: translate(100%);
     }
 
     &-header {
