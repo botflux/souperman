@@ -5,7 +5,7 @@ const parallax = ({ elements = [] } = {}) => {
     return () => {
         const currentScrollY = window.scrollY
 
-        elements.forEach(({ element, offset = 200, transformations, baseBounding, forceHeight = false }) => {
+        elements.forEach(({ element, offset = 200, transformations, baseBounding, forceHeight = false, name }) => {
 
             // on récupère la position et la hauteur du parent
             let { y, height } = baseBounding
@@ -14,7 +14,7 @@ const parallax = ({ elements = [] } = {}) => {
                 height = element.getBoundingClientRect().height
             }
 
-            console.log('height', height)
+            console.log('height', name,height)
 
             // on calcule la distance qui a été scrollé sur le parent sous forme de pourcentage
             // par exemple le scroll à l'entré du parent vaut 0, le scroll à la sortie du parent vaut 1
