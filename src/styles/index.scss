@@ -72,6 +72,7 @@ body {
         height: 100%;
         width: 100%;
         object-fit: cover;
+        background-position: bottom;
     }
 }
 
@@ -255,7 +256,7 @@ body {
         }
         
         &[data-scroll="out"] {
-            transform: translate(0, -20%);
+            transform: translate(0, 20%);
         }
     }
 

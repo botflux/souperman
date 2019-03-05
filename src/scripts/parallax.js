@@ -10,7 +10,7 @@ const parallax = ({ elements = [] } = {}) => {
     return () => {
         const currentScrollY = window.scrollY
 
-        elements.forEach(({ element, offset = 200, transformations, baseBounding, forceHeight = false, name }) => {
+        elements.forEach(({ element, offset = 200, transformations, baseBounding, forceHeight = false }) => {
 
             // on récupère la position et la hauteur du parent
             let { y, height } = baseBounding

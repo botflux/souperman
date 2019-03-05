@@ -7,7 +7,7 @@ const parallax = Parallax({
             name: 'media img',
             offset: 300,
             transformations: [
-                { min: 0, max: 1, name: 'transform', value: 'scale(${1 + (x * 3)})' }
+                { min: 0, max: 1, name: 'transform', value: 'scale(${1 + (x)})' }
             ],
         }, {
             element: document.querySelector('#landing'),

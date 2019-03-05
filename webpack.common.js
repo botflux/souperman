@@ -45,16 +45,23 @@ module.exports = {
              * Webp loader
              */
             {
-                test: /\.(jpe?g|png)$/,
-                use: [
-                    {
+                test: /\.(jpe?g|png)$/i,
+                use: [{
+
+                        loader: 'responsive-loader',
+                        options: {
+                            adapter: require('responsive-loader/sharp')
+                        }
+
+                    }
+                    /* {
                         loader: 'image-webp-loader',
                         options: {
                             name: '[name].[hash].[ext]',
                             publicPath: './',
                             requestWebp: true
                         }
-                    }
+                    } */
                 ]
             },
             /**
