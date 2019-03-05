@@ -24,10 +24,7 @@ const parallax = Parallax({
     ]
 })
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('ok')
-    parallax(true)
-    document.addEventListener('scroll', parallax, {
-        passive: true
-    })
+parallax(true)
+document.addEventListener('scroll', parallax, {
+    passive: true
 })
