@@ -1,5 +1,9 @@
 import Parallax from './parallax'
-import './scroll-out'
+
+if (window.innerWidth >= 900) {
+    import('./scroll-out.js')
+        .then(() => console.log('scroll out imported'))
+}
 
 const parallax = Parallax({
     elements: [ {
