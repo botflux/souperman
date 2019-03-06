@@ -1,3 +1,5 @@
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 if (window.innerWidth >= 900) {
     import('./scroll-out.js')
         .then(() => console.log('scroll out imported'))
