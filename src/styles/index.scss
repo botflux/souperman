@@ -81,31 +81,38 @@ body {
     margin-right: 3px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
     padding: 1px;
+
+    background: #fff;
+
+    margin-top: -200px;
+
+    position: relative;
+    z-index: 2;
 }
 
 .who {
-    & &-media[data-scroll] {
+    &-media[data-scroll] {
         transition: transform .7s ease-in-out;
     }
 
-    & &-media[data-scroll="in"] {
+    &-media[data-scroll="in"] {
         transform: translate(0);
     }
 
-    & &-media[data-scroll="out"] {
+    &-media[data-scroll="out"] {
         transform: translate(100%);
     }
 
-    & &-content[data-scroll], & &-header[data-scroll],  & &-footer {
+    &-content[data-scroll], &-header[data-scroll], &-footer {
         transition: .7s ease-in-out;
     }
 
-    & &-content[data-scroll="in"], & &-header[data-scroll="in"],  & &-footer {
+    &-content[data-scroll="in"], &-header[data-scroll="in"], &-footer {
         transform: translate(0);
         opacity: 1;
     }
 
-    & &-content[data-scroll="out"], & &-header[data-scroll="out"],  & &-footer {
+    &-content[data-scroll="out"], &-header[data-scroll="out"], &-footer {
         transform: translate(-100%);
         opacity: 0;
     }

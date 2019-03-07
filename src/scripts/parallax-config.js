@@ -20,7 +20,13 @@ const parallax = Parallax({
             transformations: [
                 { min: 0, max: 1, name: 'transform', value: 'translate(0, ${Math.round(x * 350 * 100) / 100}px)' }
             ]
-        }
+        }, /* {
+            element: document.querySelector('.section-card'),
+            offset: 1000,
+            transformations: [
+                { min: 0, max: 1, name: 'transform', value: 'translate(0, ${Math.round(x * 350 * 100) / 100 * -1}px' }
+            ]
+        } */
     ]
 })
 
