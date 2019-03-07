@@ -1,12 +1,12 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     entry: {
         app: './src/scripts/index.js',
         style: './src/styles/index.scss',
-        index: './src/templates/index.html'
     },
     output: {
         filename: '[name].[hash].js',
@@ -122,6 +122,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'animations.html',
             template: 'src/templates/animations.html'
-        })
+        }),
+        // new MiniCssExtractPlugin({
+        //     filename: '[name].css',
+        //     chunkFilename: '[id].css'
+        // })
     ]
 }

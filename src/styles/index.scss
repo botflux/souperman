@@ -643,6 +643,23 @@ body {
         &-text {
             font-size: 34px;
         }
+
+        &::after {
+            content: "Souperman";
+            position: absolute;
+            bottom: -20%;
+            right: 0;
+            left: 0;
+            font-size: 180px;
+            font-weight: 900;
+
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            text-align: center;
+            opacity: .05;
+            animation: appearFromAbove 2 ease-in forwards;
+
+        }
     }
 
     .newsletter {
@@ -750,5 +767,15 @@ body {
             width: 35%;
             margin-right: var(--page-padding-x);
         }
+    }
+}
+
+@keyframes appearFromAbove {
+    from {
+        transform: scale(12);
+    }
+
+    to {
+        transform: scale(1);
     }
 }
