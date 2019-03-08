@@ -5,6 +5,10 @@
     --title-letter-spacing: 0.133em;
     --title-font-weight: 400;
 
+    --subtitle-font-size: 1.3rem;
+    --subtitle-letter-spacing: .2em;
+    --title-font-weight: 400;
+
     --p-letter-spacing: .06em;
     --p-line-height: 1.875em;
 }
@@ -24,6 +28,12 @@ body {
     font-size: var(--title-font-size);
     letter-spacing: var(--title-letter-spacing);
     font-weight: var(--title-font-weight);
+}
+
+.subtitle {
+    font-size: var(--subtitle-font-size);
+    letter-spacing: var(--subtitle-letter-spacing);
+    font-weight: var(--subtitle-font-weight);
 }
 
 p {
@@ -60,6 +70,7 @@ button.button {
 @media screen and (min-width: 600px) {
     :root {
         --title-font-size: 3.41rem;
+        --subtitle-font-size: 1.5rem;
 
         --p-line-height: 2.8125em;
     }
@@ -70,11 +81,13 @@ button.button {
         font-size: 18px;
 
         --title-font-size: 3.7rem;
+        --subtitle-font-size: 1.6rem;
     }
 }
 
 @media screen and (min-width: 1500px) {
     :root {
         --title-font-size: 4.9rem;
+        --subtitle-font-size: 1.7rem;
     }
 }
