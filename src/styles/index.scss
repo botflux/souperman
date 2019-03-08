@@ -8,6 +8,7 @@
 @import "./components/contact.scss";
 @import "./components/newsletter.scss";
 @import "./components/inputs";
+@import "./components/spectacles.scss";
 
 :root {
     --breakpoint-xs: 300px;
@@ -20,6 +21,10 @@
     --primary-color: #FC720E;
     
     --page-padding-x: 13px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -47,6 +52,7 @@ body {
 .section-card {
     padding: 1.5em var(--page-padding-x);
     background: #FC720E22;
+    margin-bottom: 0;
 }
 
 @media screen and (min-width: 600px) {
