@@ -1,4 +1,8 @@
 .spectacle {
+    &s {
+        margin-bottom: 1.5em;
+    }
+
     &__media {
         width: 100%;
         height: 250px;
@@ -18,12 +22,15 @@
         font-weight: 400;
         text-align: center;
     }
+
+    margin-bottom: 1em;
 }
 
 @media screen and (min-width: 600px) {
     .spectacle {
         display: flex;
         align-items: center;
+        margin-bottom: 0;
 
         &__media {
             width: 35%;

@@ -18,24 +18,7 @@
 
             ${require('./index/section-card.html')}
             ${require('./index/spectacles.html')}
-
-
-            <section class="newsletter section">
-                <img srcset="${require('../images/glacons.jpg?sizes[]=300,sizes[]=600,sizes[]=700,sizes[]=800,sizes[]=900,sizes[]=1000,sizes[]=1200,sizes[]=1300,sizes[]=1400,sizes[]=1500,sizes[]=1600,sizes[]=1700,sizes[]=1800').srcSet}" alt="Fougere" class="newsletter-media" data-scroll>
-                <h2 class="title newsletter-title" data-scroll>
-                    Newsletter
-                </h2>
-                <p class="newsletter-text" data-scroll>
-                    Envie d'être au courant des dernières dates de la troupe ?
-                </p>
-                <form action="#" method="post" class="newsletter-form" data-scroll>
-                    <div class="form-group">
-                        <input type="email" class="form-group-input" id="email">
-                        <label for="email" class="form-group-label">Saisissez votre adresse email</label>
-                    </div>
-                    <button type="submit" class="button newsletter-button">Je m'abonne</button>
-                </form>
-            </section>
+            ${require('./index/newsletter.html')}
         </div>
     </div>
 
