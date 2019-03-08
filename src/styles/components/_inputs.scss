@@ -1,0 +1,61 @@
+
+
+.form-group {
+    padding-top: 20px;
+
+    position: relative;
+    text-align: left;
+
+    margin-bottom: 20px;
+
+    &-label {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-left: 10px;
+        opacity: .7;
+        transition: .3s;
+    }
+
+    textarea.form-group-input ~ &-label {
+        top: 15%;
+    }
+
+    textarea.form-group-input {
+        &:focus, &:not(:empty) {
+            & ~ .form-group-label {
+                transform: translateY(-20%);
+            }
+        }
+    }
+
+    &-input {
+        border: 0;
+        font-family: 'Source sans pro';
+        font-size: 1rem;
+        padding: 1em 0.3em;
+        width: 100%;
+        box-sizing: border-box;
+
+        background: #FC720EBB;
+        border-radius: 4px 4px 0 0;
+        border-bottom: 1px solid #00000055;
+
+        transition: .3s;
+
+        &:focus, &:not(:empty) {
+            outline: none;
+            border-bottom: 2px solid #000;
+
+            & ~ .form-group-label {
+                transform: translateY(-100%);
+                font-size: 0.9rem;
+                color: black;
+                margin-left: 0;
+            }
+        }
+    }
+}

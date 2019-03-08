@@ -1,0 +1,124 @@
+.shows {
+    &-media {
+        margin-right: var(--page-padding-x);
+        padding-top: 20px;
+        height: 200px;
+        object-fit: cover;
+
+        &[data-scroll] {
+            transition: all .3s;
+        }
+        &[data-scroll="in"] {
+            transform: translate(0);
+        }
+        &[data-scroll="out"] {
+            transform: translate(-100%);
+        }
+    }
+
+    
+    &-header[data-scroll], &-content[data-scroll], &-footer[data-scroll] {
+        transition: all .3s;
+    }
+    &-header[data-scroll="in"], &-content[data-scroll="in"], &-footer[data-scroll="in"] {
+        transform: translate(0);
+    }
+    &-header[data-scroll="out"], &-content[data-scroll="out"], &-footer[data-scroll="out"] {
+        transform: translate(100%);
+    }
+
+    &-header {
+        margin: 0 var(--page-padding-x);
+    }
+
+    &-content {
+        margin: 0 var(--page-padding-x);
+        margin-bottom: 40px;
+    }
+
+    &-footer {
+        margin-left: var(--page-padding-x);
+        margin-right: var(--page-padding-x);
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 600px)
+{
+    
+    .shows {
+        position: relative;
+
+        &-media {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 30%;
+            height: 100%;
+
+            z-index: -1;
+        }
+
+        &-content, &-footer {
+            margin-left: calc(30% + var(--page-padding-x));
+            margin-right: var(--page-padding-x);
+        }
+
+        &-footer {
+            padding-bottom: 50px;
+        }
+
+        &-header {
+            padding-top: 100px;
+            margin-left: calc(25% + var(--page-padding-x));
+            margin-right: var(--page-padding-x);
+        }
+    }
+}
+
+@media screen and (min-width: 900px)
+{
+    
+
+    .shows {
+        &-media {
+            width: 40%;
+        }
+
+        &-content, &-footer {
+            margin-left: calc(40% + var(--page-padding-x));
+        }
+
+        &-header {
+            margin-left: calc(40% + var(--page-padding-x) / 2);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) 
+{
+    
+}
+
+@media screen and (min-width: 1500px) {
+    .shows {
+        &-content {
+            width: 30%;
+            margin-left: calc(55% + var(--page-padding-x));
+        }
+
+        &-footer {
+
+            margin-left: calc(55% + var(--page-padding-x));
+        }
+
+        &-media {
+            width: 55%;
+        }
+
+        &-header {
+            margin-left: 50%;
+        }
+    }
+}

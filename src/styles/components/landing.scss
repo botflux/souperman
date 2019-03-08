@@ -1,0 +1,89 @@
+.landing {
+    min-height: 60vh;
+
+    position: relative;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    clip-path: url(#landing-content-cp);
+
+    // &-content {
+    //     position: fixed;
+    //     top: 40%;
+    //     width: 100%;
+    // }
+
+    &-title {
+        margin: 0;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+
+    &-text {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 1.1em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .landing {
+        &-text {
+            font-size: 23px;
+        }
+
+        &-title {
+            font-size: 75px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .landing {
+        &-title {
+            font-size: 102px;
+        }
+
+        &-text {
+            font-size: 34px;
+        }
+
+        &::after {
+            content: "Souperman";
+            position: absolute;
+            bottom: -20%;
+            right: 0;
+            left: 0;
+            font-size: 180px;
+            font-weight: 900;
+
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            text-align: center;
+            opacity: .05;
+            animation: appearFromAbove 2 ease-in forwards;
+
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1500px) {
+    .landing {
+        min-height: 80vh;
+
+        &-title {
+            font-size: 150px;
+        }
+
+        &-text {
+            font-size: 40px;
+        }
+    }
+}
