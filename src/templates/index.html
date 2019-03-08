@@ -10,12 +10,7 @@
     <div class="container">    
         ${require('./header.html')}
         <div class="page">
-            <section class="landing" id="landing">
-                <div class="landing-content">
-                    <p class="landing-text">Une troupe de spectacle <br><strong class="underline">pas comme les autres.</strong></p>
-                    <h1 class="landing-title title">Soupe'rman</h1>
-                </div>
-            </section>
+            ${require('./index/landing.html')}
 
             <section class="section landing-media">
                 <img srcset="${require('../images/parc.jpg?sizes[]=300,sizes[]=600,sizes[]=700,sizes[]=800,sizes[]=900,sizes[]=1000,sizes[]=1200,sizes[]=1300,sizes[]=1400,sizes[]=1500,sizes[]=1600,sizes[]=1700,sizes[]=1800,sizes[]=2000,sizes[]=4000').srcSet}" alt="La fougère" class="landing-media-img" id="landing-media-img">
