@@ -45,29 +45,13 @@ body {
 =============================================*/
 
 .section-card {
-    margin-left: 3px;
-    margin-right: 3px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-    padding: 1px;
-
-    background: #fff;
-
-    margin-top: -200px;
-
-    position: relative;
-    z-index: 2;
+    padding: 1.5em var(--page-padding-x);
+    background: #FC720E22;
 }
-
-
 
 @media screen and (min-width: 600px) {
     :root {
         --page-padding-x: 80px;
-    }
-
-    .section-card {
-        margin-left: calc(var(--page-padding-x) / 3);
-        margin-right: calc(var(--page-padding-x) / 3);
     }
 }
 
